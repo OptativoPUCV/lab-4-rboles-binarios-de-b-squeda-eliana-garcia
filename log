@@ -4,3 +4,18 @@ Tue, Apr 29, 2025  5:47:36 PM:
  tests:  4|7
 total_score: 5/70
 5729e4d
+Tue, Apr 29, 2025  6:00:15 PM: 
+ treemap.c | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'insertTreeMap':
+treemap.c:66:13: error: expected expression before '}' token
+             }
+             ^
+treemap.c:66:13: error: 'return' with a value, in function returning void [-Werror]
+treemap.c:53:6: note: declared here
+ void insertTreeMap(TreeMap * tree, void* key, void * value) {
+      ^~~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+81c1714
