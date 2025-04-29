@@ -120,14 +120,15 @@ void removeNode(TreeMap * tree, TreeNode* node) {
                 }
             }
             child->parent = node->parent;
+        }else{
+            TreeNode * successor = minimum(node->right);
+            node->pair= successor->pair;
+            removeNode(tree, successor);
+            return;
         }
-    }else{
-        TreeNode * successor = minimum(node->right);
-        node->pair= successor->pair;
-        removeNode(tree, successor);
-        return;
     }
     free(node);
+    
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
